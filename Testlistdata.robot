@@ -3,6 +3,7 @@ Library    RequestsLibrary
 Library    Collections
 Library  OperatingSystem
 
+# Verify all entries on list data have similar attributes 
 *** Test Cases ***
 Verify Certificate with Custom CA Bundle
     ${ca_bundle_path}  Set Variable   /opt/homebrew/etc/ca-certificates/cert.pem
