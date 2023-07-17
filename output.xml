@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230717 18:14:33.070" rpa="false" schemaversion="4">
+<suite id="s1" name="TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination">
+<suite id="s1-s1" name="TestSameattributes" source="/Users/harikrishnanthangavelayutham/Documents/Thillai's Docs/Comcast/Pycharm project/Automation/TestSameattributes.robot">
+<test id="s1-s1-t1" name="VerifyAllEntriesHaveSameAttributes" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Base</arg>
+<arg>${BaseURL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:33.160" level="INFO">Creating Session using : alias=Base, url=https://gorest.co.in/public/v2, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:33.160" endtime="20230717 18:14:33.160"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Base</arg>
+<arg>${Endpoint}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:33.160" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:33.501" level="INFO">GET Request : url=https://gorest.co.in/public/v2/comments 
+ path_url=/public/v2/comments 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:33.501" level="INFO">GET Response : url=https://gorest.co.in/public/v2/comments 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"3a6492abd4987372d1adef370cf945e1"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/comments?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/comments?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '267', 'x-pagination-total': '2663', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '01180818-6743-4a59-abf2-ce014637c728', 'x-runtime': '0.021131', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Hwn4c74vP6Zbbybc28An0MoY4Ui1cH4e4mIrNRa%2BqrpYzp6vD7mclX85%2Fbr8vy3SbjqRwYB3i0Xd%2BH6yXgbJU4WtlmUknXhj8JYuORtZtIndYsqn3QbiB%2F9yAAaMvEg%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293b4b8954d2d-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id":51933,"name":"The Hon. Dhanu Ahluwalia","email":"the_ahluwalia_hon_dhanu@gleason.test","body":"Autem nesciunt dolores. Modi sit facere."},{"id":45928,"post_id":51932,"name":"Gopi Acharya","email":"gopi_acharya@mitchell.test","body":"Illo neque voluptatem."},{"id":45927,"post_id":51931,"name":"Adheesh Guneta","email":"adheesh_guneta@torphy-walsh.example","body":"Necessitatibus aut et. Illo quia est. Dolore voluptatem hic."},{"id":45926,"post_id":51931,"name":"Amb. Daevika Talwar","email":"amb_daevika_talwar@pacocha.example","body":"Corporis officia aut. Itaque assumenda impedit."},{"id":45923,"post_id":51928,"name":"Vishnu Sharma","email":"sharma_vishnu@wisoky.example","body":"Exercitationem optio amet. Voluptatum blanditiis molestiae."},{"id":45922,"post_id":51927,"name":"Durga Sharma","email":"durga_sharma@kulas-nienow.example","body":"Omnis saepe et."},{"id":45921,"post_id":51924,"name":"Bhooshit Dubashi","email":"bhooshit_dubashi@murphy-bartoletti.example","body":"Non tenetur et. Eos ipsam nemo. Molestiae maiores consequatur. Ut quaerat qui."},{"id":45920,"post_id":51924,"name":"Suman Arora","email":"arora_suman@watsica.test","body":"Ipsa ea magni. Aut impedit sed. Est incidunt maxime. Mollitia iusto culpa."},{"id":45917,"post_id":51922,"name":"Msgr. Sharmila Kaur","email":"sharmila_kaur_msgr@rath.example","body":"Quam esse deserunt. Tempora quibusdam inventore. Quas corporis voluptatem."}] 
+ </msg>
+<msg timestamp="20230717 18:14:33.502" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:33.502" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:33.160" endtime="20230717 18:14:33.502"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230717 18:14:33.504" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:33.503" endtime="20230717 18:14:33.504"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${comments}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:33.506" level="INFO">${comments} = [{'id': 45930, 'post_id': 51934, 'name': 'Ahilya Dhawan MD', 'email': 'dhawan_ahilya_md@nikolaus-walker.test', 'body': 'Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem.'}, {'id': 4592...</msg>
+<status status="PASS" starttime="20230717 18:14:33.504" endtime="20230717 18:14:33.506"/>
+</kw>
+<kw name="Validate All Entries Have Same Attributes">
+<arg>${comments}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${expected_keys}</var>
+<arg>id</arg>
+<arg>name</arg>
+<arg>email</arg>
+<arg>body</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230717 18:14:33.507" level="INFO">${expected_keys} = ['id', 'name', 'email', 'body']</msg>
+<status status="PASS" starttime="20230717 18:14:33.506" endtime="20230717 18:14:33.507"/>
+</kw>
+<for flavor="IN">
+<var>${comment}</var>
+<value>@{comments}</value>
+<iter>
+<var name="${comment}">{'id': 45930, 'post_id': 51934, 'name': 'Ahilya Dhawan MD', 'email': 'dhawan_ahilya_md@nikolaus-walker.test', 'body': 'Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.507" endtime="20230717 18:14:33.508"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.510" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.509" endtime="20230717 18:14:33.510"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.510" endtime="20230717 18:14:33.510"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.508" endtime="20230717 18:14:33.510"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.507" endtime="20230717 18:14:33.511"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45929, 'post_id': 51933, 'name': 'The Hon. Dhanu Ahluwalia', 'email': 'the_ahluwalia_hon_dhanu@gleason.test', 'body': 'Autem nesciunt dolores. Modi sit facere.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.511" endtime="20230717 18:14:33.511"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.513" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.512" endtime="20230717 18:14:33.513"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.513" endtime="20230717 18:14:33.513"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.512" endtime="20230717 18:14:33.513"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.511" endtime="20230717 18:14:33.513"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45928, 'post_id': 51932, 'name': 'Gopi Acharya', 'email': 'gopi_acharya@mitchell.test', 'body': 'Illo neque voluptatem.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.513" endtime="20230717 18:14:33.514"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.515" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.514" endtime="20230717 18:14:33.515"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.515" endtime="20230717 18:14:33.515"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.514" endtime="20230717 18:14:33.515"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.513" endtime="20230717 18:14:33.515"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45927, 'post_id': 51931, 'name': 'Adheesh Guneta', 'email': 'adheesh_guneta@torphy-walsh.example', 'body': 'Necessitatibus aut et. Illo quia est. Dolore voluptatem hic.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.515" endtime="20230717 18:14:33.516"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.516" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.516" endtime="20230717 18:14:33.517"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.517" endtime="20230717 18:14:33.517"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.516" endtime="20230717 18:14:33.517"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.515" endtime="20230717 18:14:33.517"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45926, 'post_id': 51931, 'name': 'Amb. Daevika Talwar', 'email': 'amb_daevika_talwar@pacocha.example', 'body': 'Corporis officia aut. Itaque assumenda impedit.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.517" endtime="20230717 18:14:33.517"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.518" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.518" endtime="20230717 18:14:33.518"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.518" endtime="20230717 18:14:33.519"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.518" endtime="20230717 18:14:33.519"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.517" endtime="20230717 18:14:33.519"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45923, 'post_id': 51928, 'name': 'Vishnu Sharma', 'email': 'sharma_vishnu@wisoky.example', 'body': 'Exercitationem optio amet. Voluptatum blanditiis molestiae.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.519" endtime="20230717 18:14:33.519"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.520" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.520" endtime="20230717 18:14:33.520"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.520" endtime="20230717 18:14:33.520"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.519" endtime="20230717 18:14:33.520"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.519" endtime="20230717 18:14:33.520"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45922, 'post_id': 51927, 'name': 'Durga Sharma', 'email': 'durga_sharma@kulas-nienow.example', 'body': 'Omnis saepe et.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.521" endtime="20230717 18:14:33.521"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.522" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.522" endtime="20230717 18:14:33.522"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.522" endtime="20230717 18:14:33.523"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.521" endtime="20230717 18:14:33.523"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.521" endtime="20230717 18:14:33.523"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45921, 'post_id': 51924, 'name': 'Bhooshit Dubashi', 'email': 'bhooshit_dubashi@murphy-bartoletti.example', 'body': 'Non tenetur et. Eos ipsam nemo. Molestiae maiores consequatur. Ut quaerat qu...</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.523" endtime="20230717 18:14:33.523"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.524" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.524" endtime="20230717 18:14:33.524"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.524" endtime="20230717 18:14:33.524"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.523" endtime="20230717 18:14:33.524"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.523" endtime="20230717 18:14:33.524"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45920, 'post_id': 51924, 'name': 'Suman Arora', 'email': 'arora_suman@watsica.test', 'body': 'Ipsa ea magni. Aut impedit sed. Est incidunt maxime. Mollitia iusto culpa.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.524" endtime="20230717 18:14:33.525"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.526" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.525" endtime="20230717 18:14:33.526"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.526" endtime="20230717 18:14:33.526"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.525" endtime="20230717 18:14:33.526"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.524" endtime="20230717 18:14:33.526"/>
+</iter>
+<iter>
+<var name="${comment}">{'id': 45917, 'post_id': 51922, 'name': 'Msgr. Sharmila Kaur', 'email': 'sharmila_kaur_msgr@rath.example', 'body': 'Quam esse deserunt. Tempora quibusdam inventore. Quas corporis voluptatem.'}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Verifying attributes for comment with id: ${comment['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230717 18:14:33.526" endtime="20230717 18:14:33.526"/>
+</kw>
+<kw name="Validate Entry Attributes">
+<arg>${comment}</arg>
+<arg>${expected_keys}</arg>
+<kw name="Remove Values From List" library="Collections">
+<var>${missing_keys}</var>
+<arg>${expected_keys}</arg>
+<arg>...</arg>
+<arg>@{entry.keys()}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<msg timestamp="20230717 18:14:33.527" level="INFO">${missing_keys} = None</msg>
+<status status="PASS" starttime="20230717 18:14:33.527" endtime="20230717 18:14:33.527"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${missing_keys}</arg>
+<arg>Fail</arg>
+<arg>The following attributes are missing in the entry: ${missing_keys}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.527" endtime="20230717 18:14:33.527"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.526" endtime="20230717 18:14:33.527"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.526" endtime="20230717 18:14:33.527"/>
+</iter>
+<status status="PASS" starttime="20230717 18:14:33.507" endtime="20230717 18:14:33.527"/>
+</for>
+<status status="PASS" starttime="20230717 18:14:33.506" endtime="20230717 18:14:33.527"/>
+</kw>
+<doc>Verify that all entries on the list have the same attributes</doc>
+<status status="PASS" starttime="20230717 18:14:33.159" endtime="20230717 18:14:33.527"/>
+</test>
+<status status="PASS" starttime="20230717 18:14:33.085" endtime="20230717 18:14:33.528"/>
+</suite>
+<suite id="s1-s2" name="Testemail" source="/Users/harikrishnanthangavelayutham/Documents/Thillai's Docs/Comcast/Pycharm project/Automation/Testemail.robot">
+<test id="s1-s2-t1" name="Verify Response Has Email Addresses" line="7">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>gorest</arg>
+<arg>https://gorest.co.in</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:33.621" level="INFO">Creating Session using : alias=gorest, url=https://gorest.co.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:33.620" endtime="20230717 18:14:33.621"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>gorest</arg>
+<arg>/public/v2/users</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:33.621" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:33.890" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users 
+ path_url=/public/v2/users 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:33.890" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"bce7ddc170110a1a917635306bcfb378"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '296', 'x-pagination-total': '2958', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'd27add49-9c27-45cc-9b19-3386c075f8b1', 'x-runtime': '0.026507', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=gBRWmiLbcLvaDvC9CEfdQRZ%2FRWZ5meH%2FmonCgQTz4uJGYX5BRxgz0FS78AMxUzZYlzfCO3jcaXuPR5BL6ZXGdSE2zb6DHyMdB6LcB2KxfNxaobj0F%2BbYYTrNqlJ9WvA%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293b788d83dd8-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":3723967,"name":"Durgeshwari Jain DVM","email":"durgeshwari_jain_dvm@runolfsson-reichel.test","gender":"male","status":"active"},{"id":3708355,"name":"Rupinder Namboothiri","email":"rupinder_namboothiri@hauck.test","gender":"male","status":"inactive"},{"id":3708351,"name":"Bhilangana Kaul Jr.","email":"bhilangana_jr_kaul@block-armstrong.test","gender":"female","status":"inactive"},{"id":3708350,"name":"Chandani Ahluwalia","email":"chandani_ahluwalia@stanton-heller.test","gender":"male","status":"inactive"},{"id":3708349,"name":"Bhasvan Bharadwaj","email":"bhasvan_bharadwaj@dicki-volkman.test","gender":"male","status":"inactive"},{"id":3708348,"name":"Dandak Guha","email":"guha_dandak@erdman-keebler.example","gender":"male","status":"inactive"},{"id":3708347,"name":"Vaijayanthi Shukla","email":"vaijayanthi_shukla@haag-satterfield.test","gender":"female","status":"active"},{"id":3708345,"name":"Anilaabh Bharadwaj","email":"bharadwaj_anilaabh@macgyver.test","gender":"male","status":"active"},{"id":3708344,"name":"Aalok Prajapat","email":"prajapat_aalok@torphy-bergstrom.example","gender":"female","status":"active"},{"id":3708343,"name":"Sukanya Deshpande","email":"deshpande_sukanya@crooks-crona.test","gender":"male","status":"active"}] 
+ </msg>
+<msg timestamp="20230717 18:14:33.891" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:33.892" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:33.621" endtime="20230717 18:14:33.892"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230717 18:14:33.893" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:33.892" endtime="20230717 18:14:33.893"/>
+</kw>
+<kw name="Should Be Equal As Strings">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230717 18:14:33.893" endtime="20230717 18:14:33.894"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.893" endtime="20230717 18:14:33.894"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${response_content}</var>
+<arg>${response.content.decode('utf-8')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:33.895" level="INFO">${response_content} = [{"id":3723967,"name":"Durgeshwari Jain DVM","email":"durgeshwari_jain_dvm@runolfsson-reichel.test","gender":"male","status":"active"},{"id":3708355,"name":"Rupinder Namboothiri","email":"rupinder_nam...</msg>
+<status status="PASS" starttime="20230717 18:14:33.894" endtime="20230717 18:14:33.895"/>
+</kw>
+<kw name="Should Be Valid JSON">
+<arg>${response_content}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${parsed_json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:33.895" level="INFO">${parsed_json} = [{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email'...</msg>
+<status status="PASS" starttime="20230717 18:14:33.895" endtime="20230717 18:14:33.895"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${parsed_json}" == "null"</arg>
+<arg>Fail</arg>
+<arg>The response is not a valid JSON document</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:33.896" endtime="20230717 18:14:33.896"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.895" endtime="20230717 18:14:33.896"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json_data}</var>
+<arg>json.loads('''${response_content}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:33.896" level="INFO">${json_data} = [{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email'...</msg>
+<status status="PASS" starttime="20230717 18:14:33.896" endtime="20230717 18:14:33.896"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${users}</var>
+<arg>${json_data}</arg>
+<arg>\[data]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:33.897" level="INFO">${users} = [[{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email...</msg>
+<status status="PASS" starttime="20230717 18:14:33.896" endtime="20230717 18:14:33.897"/>
+</kw>
+<kw name="Get Email Addresses">
+<var>${email_addresses}</var>
+<arg>${users}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${email_addresses}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230717 18:14:33.897" level="INFO">${email_addresses} = []</msg>
+<status status="PASS" starttime="20230717 18:14:33.897" endtime="20230717 18:14:33.897"/>
+</kw>
+<for flavor="IN">
+<var>${user}</var>
+<value>@{users}</value>
+<iter>
+<var name="${user}">[{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email'...</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email}</var>
+<arg>${user}</arg>
+<arg>\[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:33.898" level="INFO">${email} = [[{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email...</msg>
+<status status="PASS" starttime="20230717 18:14:33.897" endtime="20230717 18:14:33.898"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${email_addresses}</arg>
+<arg>${email}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230717 18:14:33.898" endtime="20230717 18:14:33.898"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.897" endtime="20230717 18:14:33.898"/>
+</iter>
+<iter>
+<var name="${user}">[data]</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email}</var>
+<arg>${user}</arg>
+<arg>\[email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:33.898" level="INFO">${email} = ['[data]', '[email]']</msg>
+<status status="PASS" starttime="20230717 18:14:33.898" endtime="20230717 18:14:33.898"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${email_addresses}</arg>
+<arg>${email}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230717 18:14:33.898" endtime="20230717 18:14:33.898"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.898" endtime="20230717 18:14:33.899"/>
+</iter>
+<status status="PASS" starttime="20230717 18:14:33.897" endtime="20230717 18:14:33.899"/>
+</for>
+<msg timestamp="20230717 18:14:33.899" level="INFO">${email_addresses} = [[[{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'emai...</msg>
+<status status="PASS" starttime="20230717 18:14:33.897" endtime="20230717 18:14:33.899"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${email_addresses}</arg>
+<arg>No email addresses found in the response</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20230717 18:14:33.899" level="INFO">Length is 2</msg>
+<status status="PASS" starttime="20230717 18:14:33.899" endtime="20230717 18:14:33.899"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.620" endtime="20230717 18:14:33.899"/>
+</test>
+<status status="PASS" starttime="20230717 18:14:33.528" endtime="20230717 18:14:33.900"/>
+</suite>
+<suite id="s1-s3" name="Testjsondata" source="/Users/harikrishnanthangavelayutham/Documents/Thillai's Docs/Comcast/Pycharm project/Automation/Testjsondata.robot">
+<test id="s1-s3-t1" name="Verify Response Data Has Valid JSON Format" line="8">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>gorest</arg>
+<arg>https://gorest.co.in</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:33.903" level="INFO">Creating Session using : alias=gorest, url=https://gorest.co.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:33.903" endtime="20230717 18:14:33.904"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>gorest</arg>
+<arg>/public/v2/comments</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:33.904" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:34.326" level="INFO">GET Request : url=https://gorest.co.in/public/v2/comments 
+ path_url=/public/v2/comments 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:34.326" level="INFO">GET Response : url=https://gorest.co.in/public/v2/comments 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"3a6492abd4987372d1adef370cf945e1"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/comments?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/comments?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '267', 'x-pagination-total': '2663', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'dccb0b8e-881d-4762-8c5b-7bfbb4499449', 'x-runtime': '0.025820', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=fvo7wmN1RrNHFURgyrf0dGlUbt3fZEkRPGkWd8tcm%2B2lbyKJYTkEYDLmBU0TSrYDEfEyO7c0R7TzpM8OGU95r0ZvF3ZdYYLrNcE%2BdcN6TUkgffzFudcclQSYbeVXNkk%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293b96b094b1a-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id":51933,"name":"The Hon. Dhanu Ahluwalia","email":"the_ahluwalia_hon_dhanu@gleason.test","body":"Autem nesciunt dolores. Modi sit facere."},{"id":45928,"post_id":51932,"name":"Gopi Acharya","email":"gopi_acharya@mitchell.test","body":"Illo neque voluptatem."},{"id":45927,"post_id":51931,"name":"Adheesh Guneta","email":"adheesh_guneta@torphy-walsh.example","body":"Necessitatibus aut et. Illo quia est. Dolore voluptatem hic."},{"id":45926,"post_id":51931,"name":"Amb. Daevika Talwar","email":"amb_daevika_talwar@pacocha.example","body":"Corporis officia aut. Itaque assumenda impedit."},{"id":45923,"post_id":51928,"name":"Vishnu Sharma","email":"sharma_vishnu@wisoky.example","body":"Exercitationem optio amet. Voluptatum blanditiis molestiae."},{"id":45922,"post_id":51927,"name":"Durga Sharma","email":"durga_sharma@kulas-nienow.example","body":"Omnis saepe et."},{"id":45921,"post_id":51924,"name":"Bhooshit Dubashi","email":"bhooshit_dubashi@murphy-bartoletti.example","body":"Non tenetur et. Eos ipsam nemo. Molestiae maiores consequatur. Ut quaerat qui."},{"id":45920,"post_id":51924,"name":"Suman Arora","email":"arora_suman@watsica.test","body":"Ipsa ea magni. Aut impedit sed. Est incidunt maxime. Mollitia iusto culpa."},{"id":45917,"post_id":51922,"name":"Msgr. Sharmila Kaur","email":"sharmila_kaur_msgr@rath.example","body":"Quam esse deserunt. Tempora quibusdam inventore. Quas corporis voluptatem."}] 
+ </msg>
+<msg timestamp="20230717 18:14:34.327" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:34.327" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:33.904" endtime="20230717 18:14:34.327"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${response_status}</var>
+<arg>${response.status_code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:34.329" level="INFO">${response_status} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:34.328" endtime="20230717 18:14:34.329"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230717 18:14:34.331" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:34.330" endtime="20230717 18:14:34.331"/>
+</kw>
+<kw name="Should Be Equal As Strings">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230717 18:14:34.332" endtime="20230717 18:14:34.332"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:34.331" endtime="20230717 18:14:34.332"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${response_content}</var>
+<arg>${response.content.decode('utf-8')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:34.334" level="INFO">${response_content} = [{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id"...</msg>
+<status status="PASS" starttime="20230717 18:14:34.333" endtime="20230717 18:14:34.334"/>
+</kw>
+<kw name="Should Be Valid JSON">
+<arg>${response_content}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${parsed_json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:34.335" level="INFO">${parsed_json} = [{'id': 45930, 'post_id': 51934, 'name': 'Ahilya Dhawan MD', 'email': 'dhawan_ahilya_md@nikolaus-walker.test', 'body': 'Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem.'}, {'id': 4592...</msg>
+<status status="PASS" starttime="20230717 18:14:34.335" endtime="20230717 18:14:34.335"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${parsed_json}" == "null"</arg>
+<arg>Fail</arg>
+<arg>The response is not a valid JSON document</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:34.335" endtime="20230717 18:14:34.336"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:34.334" endtime="20230717 18:14:34.336"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:33.903" endtime="20230717 18:14:34.336"/>
+</test>
+<status status="PASS" starttime="20230717 18:14:33.900" endtime="20230717 18:14:34.336"/>
+</suite>
+<suite id="s1-s4" name="Testnonfunctional" source="/Users/harikrishnanthangavelayutham/Documents/Thillai's Docs/Comcast/Pycharm project/Automation/Testnonfunctional.robot">
+<test id="s1-s4-t1" name="Verify HTTP Response Code" line="8">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>gorest</arg>
+<arg>https://gorest.co.in</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:34.342" level="INFO">Creating Session using : alias=gorest, url=https://gorest.co.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:34.342" endtime="20230717 18:14:34.342"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>gorest</arg>
+<arg>/public/v2/comments</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:34.342" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:34.670" level="INFO">GET Request : url=https://gorest.co.in/public/v2/comments 
+ path_url=/public/v2/comments 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:34.670" level="INFO">GET Response : url=https://gorest.co.in/public/v2/comments 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"3a6492abd4987372d1adef370cf945e1"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/comments?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/comments?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '267', 'x-pagination-total': '2663', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'c1959460-b9e6-4da5-b6c4-ef7d3b5d11b6', 'x-runtime': '0.022395', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DbMZNjzqnUADR%2BLO20%2FyT%2BdgLHy4qYdY6n4NSofsgWMZRyRN56mRhiPdyU60EzBy4%2Bb55jTJhush7gg8u6PuQi%2FDBxeNo8hmPePXH%2FwS1e7QkX%2BFcJusbwR8Uz%2B9XkU%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293bc0bc1897a-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id":51933,"name":"The Hon. Dhanu Ahluwalia","email":"the_ahluwalia_hon_dhanu@gleason.test","body":"Autem nesciunt dolores. Modi sit facere."},{"id":45928,"post_id":51932,"name":"Gopi Acharya","email":"gopi_acharya@mitchell.test","body":"Illo neque voluptatem."},{"id":45927,"post_id":51931,"name":"Adheesh Guneta","email":"adheesh_guneta@torphy-walsh.example","body":"Necessitatibus aut et. Illo quia est. Dolore voluptatem hic."},{"id":45926,"post_id":51931,"name":"Amb. Daevika Talwar","email":"amb_daevika_talwar@pacocha.example","body":"Corporis officia aut. Itaque assumenda impedit."},{"id":45923,"post_id":51928,"name":"Vishnu Sharma","email":"sharma_vishnu@wisoky.example","body":"Exercitationem optio amet. Voluptatum blanditiis molestiae."},{"id":45922,"post_id":51927,"name":"Durga Sharma","email":"durga_sharma@kulas-nienow.example","body":"Omnis saepe et."},{"id":45921,"post_id":51924,"name":"Bhooshit Dubashi","email":"bhooshit_dubashi@murphy-bartoletti.example","body":"Non tenetur et. Eos ipsam nemo. Molestiae maiores consequatur. Ut quaerat qui."},{"id":45920,"post_id":51924,"name":"Suman Arora","email":"arora_suman@watsica.test","body":"Ipsa ea magni. Aut impedit sed. Est incidunt maxime. Mollitia iusto culpa."},{"id":45917,"post_id":51922,"name":"Msgr. Sharmila Kaur","email":"sharmila_kaur_msgr@rath.example","body":"Quam esse deserunt. Tempora quibusdam inventore. Quas corporis voluptatem."}] 
+ </msg>
+<msg timestamp="20230717 18:14:34.670" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:34.671" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:34.342" endtime="20230717 18:14:34.671"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230717 18:14:34.672" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:34.671" endtime="20230717 18:14:34.672"/>
+</kw>
+<kw name="Should Be Equal As Strings">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230717 18:14:34.674" endtime="20230717 18:14:34.674"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:34.673" endtime="20230717 18:14:34.674"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:34.341" endtime="20230717 18:14:34.675"/>
+</test>
+<test id="s1-s4-t2" name="Verify REST Service Without Authentication" line="15">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>gorest</arg>
+<arg>https://gorest.co.in</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:34.676" level="INFO">Creating Session using : alias=gorest, url=https://gorest.co.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:34.675" endtime="20230717 18:14:34.676"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>gorest</arg>
+<arg>/public/v2/comments</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:34.676" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:35.024" level="INFO">GET Request : url=https://gorest.co.in/public/v2/comments 
+ path_url=/public/v2/comments 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:35.024" level="INFO">GET Response : url=https://gorest.co.in/public/v2/comments 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"3a6492abd4987372d1adef370cf945e1"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/comments?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/comments?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '267', 'x-pagination-total': '2663', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '76f8b14d-74ae-41b7-8f1b-ac58b55245b9', 'x-runtime': '0.021420', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=bzaU27XFsxy%2BYIZWuY19bfHK82bL6N3wQrB01ErXBacyto0b7N6t3tSXgsr490LXWm5l42rVuxwvfCsj2Z1hapgYTKMnNeqiCxx6XL4uv2jv7MJxfjpW9YEcXVp1Q%2F8%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293be1f993db9-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id":51933,"name":"The Hon. Dhanu Ahluwalia","email":"the_ahluwalia_hon_dhanu@gleason.test","body":"Autem nesciunt dolores. Modi sit facere."},{"id":45928,"post_id":51932,"name":"Gopi Acharya","email":"gopi_acharya@mitchell.test","body":"Illo neque voluptatem."},{"id":45927,"post_id":51931,"name":"Adheesh Guneta","email":"adheesh_guneta@torphy-walsh.example","body":"Necessitatibus aut et. Illo quia est. Dolore voluptatem hic."},{"id":45926,"post_id":51931,"name":"Amb. Daevika Talwar","email":"amb_daevika_talwar@pacocha.example","body":"Corporis officia aut. Itaque assumenda impedit."},{"id":45923,"post_id":51928,"name":"Vishnu Sharma","email":"sharma_vishnu@wisoky.example","body":"Exercitationem optio amet. Voluptatum blanditiis molestiae."},{"id":45922,"post_id":51927,"name":"Durga Sharma","email":"durga_sharma@kulas-nienow.example","body":"Omnis saepe et."},{"id":45921,"post_id":51924,"name":"Bhooshit Dubashi","email":"bhooshit_dubashi@murphy-bartoletti.example","body":"Non tenetur et. Eos ipsam nemo. Molestiae maiores consequatur. Ut quaerat qui."},{"id":45920,"post_id":51924,"name":"Suman Arora","email":"arora_suman@watsica.test","body":"Ipsa ea magni. Aut impedit sed. Est incidunt maxime. Mollitia iusto culpa."},{"id":45917,"post_id":51922,"name":"Msgr. Sharmila Kaur","email":"sharmila_kaur_msgr@rath.example","body":"Quam esse deserunt. Tempora quibusdam inventore. Quas corporis voluptatem."}] 
+ </msg>
+<msg timestamp="20230717 18:14:35.025" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:35.025" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:34.676" endtime="20230717 18:14:35.025"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230717 18:14:35.027" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:35.026" endtime="20230717 18:14:35.027"/>
+</kw>
+<kw name="Should Be Equal As Strings">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230717 18:14:35.028" endtime="20230717 18:14:35.029"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.028" endtime="20230717 18:14:35.029"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${json_data}</var>
+<arg>${response.content}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:35.030" level="INFO">${json_data} = [{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id"...</msg>
+<status status="PASS" starttime="20230717 18:14:35.029" endtime="20230717 18:14:35.030"/>
+</kw>
+<kw name="Should Be Valid JSON">
+<arg>${json_data}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${parsed_json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:35.031" level="INFO">${parsed_json} = [{'id': 45930, 'post_id': 51934, 'name': 'Ahilya Dhawan MD', 'email': 'dhawan_ahilya_md@nikolaus-walker.test', 'body': 'Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem.'}, {'id': 4592...</msg>
+<status status="PASS" starttime="20230717 18:14:35.030" endtime="20230717 18:14:35.031"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${parsed_json}" == "null"</arg>
+<arg>Fail</arg>
+<arg>The response is not a valid JSON document</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:35.031" endtime="20230717 18:14:35.032"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.030" endtime="20230717 18:14:35.032"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:34.675" endtime="20230717 18:14:35.032"/>
+</test>
+<test id="s1-s4-t3" name="Verify Non-SSL REST Endpoint Behavior" line="23">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>gorest</arg>
+<arg>http://gorest.co.in</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:35.033" level="INFO">Creating Session using : alias=gorest, url=http://gorest.co.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:35.033" endtime="20230717 18:14:35.033"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>gorest</arg>
+<arg>/public/v2/comments</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:35.034" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:35.518" level="INFO">GET Request : url=http://gorest.co.in/public/v2/comments (redirected) 
+ path_url=/public/v2/comments 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:35.518" level="INFO">GET Response : url=https://gorest.co.in/public/v2/comments 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"3a6492abd4987372d1adef370cf945e1"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/comments?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/comments?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '267', 'x-pagination-total': '2663', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'd494a034-1291-48e5-98a6-4a7c8a63aea3', 'x-runtime': '0.046442', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=CISU9itHnJ74thqkjqpInXyFOCmSB2%2FtMLr%2F6brDhQVYFydVDdV8ZN5wSSgPvjbDJhXaw9PEkPMyU60XBUMYEppA%2Fa3AXIQmyZwe5TQGqq0g56iDZPkv8kHUe4vbvVo%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293c198649e2c-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id":51933,"name":"The Hon. Dhanu Ahluwalia","email":"the_ahluwalia_hon_dhanu@gleason.test","body":"Autem nesciunt dolores. Modi sit facere."},{"id":45928,"post_id":51932,"name":"Gopi Acharya","email":"gopi_acharya@mitchell.test","body":"Illo neque voluptatem."},{"id":45927,"post_id":51931,"name":"Adheesh Guneta","email":"adheesh_guneta@torphy-walsh.example","body":"Necessitatibus aut et. Illo quia est. Dolore voluptatem hic."},{"id":45926,"post_id":51931,"name":"Amb. Daevika Talwar","email":"amb_daevika_talwar@pacocha.example","body":"Corporis officia aut. Itaque assumenda impedit."},{"id":45923,"post_id":51928,"name":"Vishnu Sharma","email":"sharma_vishnu@wisoky.example","body":"Exercitationem optio amet. Voluptatum blanditiis molestiae."},{"id":45922,"post_id":51927,"name":"Durga Sharma","email":"durga_sharma@kulas-nienow.example","body":"Omnis saepe et."},{"id":45921,"post_id":51924,"name":"Bhooshit Dubashi","email":"bhooshit_dubashi@murphy-bartoletti.example","body":"Non tenetur et. Eos ipsam nemo. Molestiae maiores consequatur. Ut quaerat qui."},{"id":45920,"post_id":51924,"name":"Suman Arora","email":"arora_suman@watsica.test","body":"Ipsa ea magni. Aut impedit sed. Est incidunt maxime. Mollitia iusto culpa."},{"id":45917,"post_id":51922,"name":"Msgr. Sharmila Kaur","email":"sharmila_kaur_msgr@rath.example","body":"Quam esse deserunt. Tempora quibusdam inventore. Quas corporis voluptatem."}] 
+ </msg>
+<msg timestamp="20230717 18:14:35.519" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:35.519" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:35.034" endtime="20230717 18:14:35.519"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230717 18:14:35.521" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:35.519" endtime="20230717 18:14:35.521"/>
+</kw>
+<kw name="Should Be Equal As Strings">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230717 18:14:35.521" endtime="20230717 18:14:35.522"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.521" endtime="20230717 18:14:35.522"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${json_data}</var>
+<arg>${response.content}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:35.523" level="INFO">${json_data} = [{"id":45930,"post_id":51934,"name":"Ahilya Dhawan MD","email":"dhawan_ahilya_md@nikolaus-walker.test","body":"Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem."},{"id":45929,"post_id"...</msg>
+<status status="PASS" starttime="20230717 18:14:35.522" endtime="20230717 18:14:35.523"/>
+</kw>
+<kw name="Should Be Valid JSON">
+<arg>${json_data}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${parsed_json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:35.524" level="INFO">${parsed_json} = [{'id': 45930, 'post_id': 51934, 'name': 'Ahilya Dhawan MD', 'email': 'dhawan_ahilya_md@nikolaus-walker.test', 'body': 'Voluptatem similique ipsam. Eum dolore quia. Culpa ut voluptatem.'}, {'id': 4592...</msg>
+<status status="PASS" starttime="20230717 18:14:35.523" endtime="20230717 18:14:35.524"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${parsed_json}" == "null"</arg>
+<arg>Fail</arg>
+<arg>The response is not a valid JSON document</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:35.524" endtime="20230717 18:14:35.524"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.523" endtime="20230717 18:14:35.525"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.032" endtime="20230717 18:14:35.525"/>
+</test>
+<status status="PASS" starttime="20230717 18:14:34.338" endtime="20230717 18:14:35.525"/>
+</suite>
+<suite id="s1-s5" name="Testverifypagination" source="/Users/harikrishnanthangavelayutham/Documents/Thillai's Docs/Comcast/Pycharm project/Automation/Testverifypagination.robot">
+<test id="s1-s5-t1" name="Verify Response Has Pagination" line="7">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>gorest</arg>
+<arg>https://gorest.co.in</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230717 18:14:35.532" level="INFO">Creating Session using : alias=gorest, url=https://gorest.co.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230717 18:14:35.532" endtime="20230717 18:14:35.532"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>gorest</arg>
+<arg>/public/v2/users?page=1&amp;per_page=20</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230717 18:14:35.532" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:35.885" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users?page=1&amp;per_page=20 
+ path_url=/public/v2/users?page=1&amp;per_page=20 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230717 18:14:35.885" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users?page=1&amp;per_page=20 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Jul 2023 12:44:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"d9f6c7a9f48a201f4ab978e905e0b768"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '296', 'x-pagination-total': '2958', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '23eecbf3-8c41-4069-abb2-e75e16149c76', 'x-runtime': '0.046465', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=uch6Mo5A3X4h%2Flsv4X5gz27gUe61pIikv131y1YyoyVC5HvthbeCvlqpxOlIgLmYAySnO3BKvMDjrO94peF%2F%2FuHEUK23hDN3%2Bk7hQzpL%2B9oLNaKsz%2FGvhpA9GcS6AiY%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7e8293c37da49fd3-SIN', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":3723967,"name":"Durgeshwari Jain DVM","email":"durgeshwari_jain_dvm@runolfsson-reichel.test","gender":"male","status":"active"},{"id":3708355,"name":"Rupinder Namboothiri","email":"rupinder_namboothiri@hauck.test","gender":"male","status":"inactive"},{"id":3708351,"name":"Bhilangana Kaul Jr.","email":"bhilangana_jr_kaul@block-armstrong.test","gender":"female","status":"inactive"},{"id":3708350,"name":"Chandani Ahluwalia","email":"chandani_ahluwalia@stanton-heller.test","gender":"male","status":"inactive"},{"id":3708349,"name":"Bhasvan Bharadwaj","email":"bhasvan_bharadwaj@dicki-volkman.test","gender":"male","status":"inactive"},{"id":3708348,"name":"Dandak Guha","email":"guha_dandak@erdman-keebler.example","gender":"male","status":"inactive"},{"id":3708347,"name":"Vaijayanthi Shukla","email":"vaijayanthi_shukla@haag-satterfield.test","gender":"female","status":"active"},{"id":3708345,"name":"Anilaabh Bharadwaj","email":"bharadwaj_anilaabh@macgyver.test","gender":"male","status":"active"},{"id":3708344,"name":"Aalok Prajapat","email":"prajapat_aalok@torphy-bergstrom.example","gender":"female","status":"active"},{"id":3708343,"name":"Sukanya Deshpande","email":"deshpande_sukanya@crooks-crona.test","gender":"male","status":"active"},{"id":3708342,"name":"Mrs. Swarnalata Prajapat","email":"mrs_swarnalata_prajapat@crona.example","gender":"female","status":"active"},{"id":3708341,"name":"Diksha Chaturvedi","email":"diksha_chaturvedi@windler.example","gender":"female","status":"inactive"},{"id":3708340,"name":"Damodara Achari","email":"achari_damodara@gislason.test","gender":"male","status":"active"},{"id":3708339,"name":"Baalagopaal Khanna","email":"baalagopaal_khanna@cronin.test","gender":"female","status":"inactive"},{"id":3708338,"name":"Durgeshwari Asan","email":"asan_durgeshwari@greenholt.test","gender":"female","status":"inactive"},{"id":3708337,"name":"Dipesh Guha","email":"dipesh_guha@lueilwitz-marquardt.example","gender":"female","status":"active"},{"id":3708336,"name":"Rep. Dharani Nehru","email":"nehru_rep_dharani@lebsack.test","gender":"female","status":"inactive"},{"id":3708335,"name":"Ashok Shah","email":"ashok_shah@kessler.example","gender":"female","status":"active"},{"id":3708334,"name":"Gandharv Ahluwalia","email":"gandharv_ahluwalia@rau.example","gender":"male","status":"inactive"},{"id":3708333,"name":"Ganesh Asan","email":"ganesh_asan@price.test","gender":"male","status":"active"}] 
+ </msg>
+<msg timestamp="20230717 18:14:35.886" level="INFO">/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230717 18:14:35.886" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230717 18:14:35.532" endtime="20230717 18:14:35.886"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230717 18:14:35.888" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230717 18:14:35.887" endtime="20230717 18:14:35.888"/>
+</kw>
+<kw name="Should Be Equal As Strings">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230717 18:14:35.889" endtime="20230717 18:14:35.889"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.888" endtime="20230717 18:14:35.889"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${response_content}</var>
+<arg>${response.content.decode('utf-8')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 18:14:35.890" level="INFO">${response_content} = [{"id":3723967,"name":"Durgeshwari Jain DVM","email":"durgeshwari_jain_dvm@runolfsson-reichel.test","gender":"male","status":"active"},{"id":3708355,"name":"Rupinder Namboothiri","email":"rupinder_nam...</msg>
+<status status="PASS" starttime="20230717 18:14:35.889" endtime="20230717 18:14:35.890"/>
+</kw>
+<kw name="Should Be Valid JSON">
+<arg>${response_content}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${parsed_json}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:35.891" level="INFO">${parsed_json} = [{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email'...</msg>
+<status status="PASS" starttime="20230717 18:14:35.890" endtime="20230717 18:14:35.891"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${parsed_json}" == "null"</arg>
+<arg>Fail</arg>
+<arg>The response is not a valid JSON document</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230717 18:14:35.891" endtime="20230717 18:14:35.891"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.890" endtime="20230717 18:14:35.891"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json_data}</var>
+<arg>json.loads('''${response_content}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230717 18:14:35.892" level="INFO">${json_data} = [{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email'...</msg>
+<status status="PASS" starttime="20230717 18:14:35.891" endtime="20230717 18:14:35.892"/>
+</kw>
+<kw name="Get Pagination Info">
+<var>${pagination}</var>
+<arg>${json_data}</arg>
+<msg timestamp="20230717 18:14:35.892" level="INFO">${pagination} = [{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboothiri', 'email'...</msg>
+<status status="PASS" starttime="20230717 18:14:35.892" endtime="20230717 18:14:35.892"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${pagination}</arg>
+<arg>Pagination information not found in the response</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20230717 18:14:35.893" level="INFO">Length is 20</msg>
+<status status="PASS" starttime="20230717 18:14:35.893" endtime="20230717 18:14:35.893"/>
+</kw>
+<kw name="Get List Length">
+<var>${total_pages}</var>
+<arg>${pagination}</arg>
+<msg timestamp="20230717 18:14:35.894" level="INFO">${total_pages} = ['Get Length', [{'id': 3723967, 'name': 'Durgeshwari Jain DVM', 'email': 'durgeshwari_jain_dvm@runolfsson-reichel.test', 'gender': 'male', 'status': 'active'}, {'id': 3708355, 'name': 'Rupinder Namboo...</msg>
+<status status="PASS" starttime="20230717 18:14:35.893" endtime="20230717 18:14:35.894"/>
+</kw>
+<status status="PASS" starttime="20230717 18:14:35.531" endtime="20230717 18:14:35.894"/>
+</test>
+<status status="PASS" starttime="20230717 18:14:35.527" endtime="20230717 18:14:35.895"/>
+</suite>
+<status status="PASS" starttime="20230717 18:14:33.071" endtime="20230717 18:14:35.896"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination">TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestSameattributes">TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination.TestSameattributes</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Testemail">TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination.Testemail</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Testjsondata">TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination.Testjsondata</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s4" name="Testnonfunctional">TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination.Testnonfunctional</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="Testverifypagination">TestSameattributes &amp; Testemail &amp; Testjsondata &amp; Testnonfunctional &amp; Testverifypagination.Testverifypagination</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230717 18:14:33.160" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:33.621" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:33.904" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:34.342" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:34.676" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:35.034" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230717 18:14:35.532" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+</errors>
+</robot>
