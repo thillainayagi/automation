@@ -2,6 +2,7 @@
 Library    RequestsLibrary
 Library    Collections
 
+# Verify Response data has valid email address
 *** Test Cases ***
 Verify Email Addresses
     Create Session    gorest    https://gorest.co.in
