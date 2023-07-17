@@ -4,6 +4,7 @@ Library    Collections
 Library    OperatingSystem
 Library    JSONLibrary
 
+#Verify valid JSON data
 *** Test Cases ***
 Validate JSON Response
     Create Session    gorest    https://gorest.co.in
