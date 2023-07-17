@@ -2,6 +2,8 @@
 Library    RequestsLibrary
 Library    Collections
 
+# Verify response has pagination
+
 *** Test Cases ***
 Verify Pagination
     Create Session    gorest    https://gorest.co.in
