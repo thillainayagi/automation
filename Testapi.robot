@@ -9,7 +9,7 @@ Validate JSON Response
     ${response}    Get Request    gorest    /public/v2/users    headers=${headers}
     Should Be Equal As Strings    ${response.status_code}    200
     log to console ${response.content}
-    #Should Be Valid JSON    ${response.content}
+    Should Be Valid JSON    ${response.content}
 
     ${json_data}    Parse JSON    ${response.content}
     ${results}    Get Value From JSON    ${json_data}    $.data
